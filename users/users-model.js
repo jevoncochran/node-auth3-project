@@ -18,12 +18,11 @@ function add(user) {
 
 function find() {
     return db('users')
-        .select('id', 'username', 'department', 'password')
+        .select('id', 'username', 'department')
 }
 
 function findBy(filter) {
     return db('users')
-        .select('id', 'username', 'department')
         .where(filter)
 }
 
